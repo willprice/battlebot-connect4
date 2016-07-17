@@ -1,2 +1,4 @@
-rootProject.name = 'connect4'
+rootProject.name = "battlebot-connect4"
 
+include 'model'
+include 'game-server'

@@ -1,15 +1,15 @@
-group 'org.willprice'
-version '0.0.0'
+subprojects {
+    apply plugin: 'java'
 
-apply plugin: 'java'
+    sourceCompatibility = 1.8
 
-sourceCompatibility = 1.8
+    repositories {
+        mavenCentral()
+    }
 
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
-    testCompile group: 'pl.pragmatists', name: 'JUnitParams', version: '1.0.5'
+    dependencies {
+        testCompile group: 'junit', name: 'junit', version: '4.12'
+        testCompile group: 'pl.pragmatists', name: 'JUnitParams', version: '1.0.5'
+        testCompile group: 'org.mockito', name: 'mockito-all', version: '1.9.5'
+    }
 }
