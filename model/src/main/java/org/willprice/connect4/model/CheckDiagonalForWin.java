@@ -1,6 +1,4 @@
-package org.willprice.connect4;
-
-import org.willprice.connect4.model.Coordinate;
+package org.willprice.connect4.model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +24,7 @@ public class CheckDiagonalForWin extends GridCheck {
         int startOfRunColumnIndex = grid.getLastCoordinateUsed().getColumnIndex() - candidatePositionIndex;
         int startOfRunRowIndex = grid.getLastCoordinateUsed().getRowIndex() - candidatePositionIndex;
         if (startOfRunRowIndex - (grid.getRunLength() - 1) < 0 || startOfRunRowIndex >= grid.getRowsLength() ||
-                startOfRunColumnIndex < 0 || startOfRunColumnIndex + (grid.getRunLength() - 1) >= grid.getColsLength()
+                startOfRunColumnIndex < 0 || startOfRunColumnIndex + grid.getRunLength() - 1 >= grid.getColsLength()
                 ) {
             return null;
         }
@@ -40,8 +38,8 @@ public class CheckDiagonalForWin extends GridCheck {
     private Coordinate[] generateAscendingDiagonalRunToCheck(Grid grid, int candidatePositionIndex) {
         int startOfRunColumnIndex = grid.getLastCoordinateUsed().getColumnIndex() - candidatePositionIndex;
         int startOfRunRowIndex = grid.getLastCoordinateUsed().getRowIndex() - candidatePositionIndex;
-        if (startOfRunRowIndex < 0 || startOfRunRowIndex + (grid.getRunLength() - 1) >= grid.getRowsLength() ||
-            startOfRunColumnIndex < 0 || startOfRunColumnIndex + (grid.getRunLength() - 1) >= grid.getColsLength()
+        if (startOfRunRowIndex < 0 || startOfRunRowIndex + grid.getRunLength() - 1 >= grid.getRowsLength() ||
+            startOfRunColumnIndex < 0 || startOfRunColumnIndex + grid.getRunLength() - 1 >= grid.getColsLength()
         ) {
             return null;
         }

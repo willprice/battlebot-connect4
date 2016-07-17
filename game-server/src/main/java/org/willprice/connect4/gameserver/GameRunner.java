@@ -10,7 +10,7 @@ import org.willprice.connect4.model.players.Player;
  * until the game is over.
  */
 public class GameRunner {
-    private Connect4Factory gameFactory;
+    private final Connect4Factory gameFactory;
 
     public GameRunner(Connect4Factory gameFactory) {
         this.gameFactory = gameFactory;

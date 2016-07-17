@@ -1,9 +1,9 @@
 package org.willprice.connect4.model;
 
 public class ColouredDisc {
-    private String id;
+    private final String id;
 
-    ColouredDisc(String id) {
+    public ColouredDisc(String id) {
         this.id = id;
     }
 

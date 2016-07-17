@@ -2,8 +2,8 @@ package org.willprice.connect4.gameserver;
 
 public class GameServer implements GameListener {
     public static final int WAIT_TIME_BETWEEN_CHECKS_MS = 1000;
-    private boolean waitingBetweenChecks = false;
-    private GameCoordinator coordinator;
+    private boolean waitingBetweenChecks;
+    private final GameCoordinator coordinator;
 
     public GameServer(GameCoordinator coordinator) {
 
@@ -23,6 +23,7 @@ public class GameServer implements GameListener {
         return waitingBetweenChecks;
     }
 
+    @Override
     public void noGameStarted() {
         waitingBetweenChecks = true;
     }

@@ -1,7 +1,4 @@
-package org.willprice.connect4;
-
-import org.willprice.connect4.model.ColouredDisc;
-import org.willprice.connect4.model.Coordinate;
+package org.willprice.connect4.model;
 
 import java.util.List;
 
@@ -9,8 +6,7 @@ public abstract class GridCheck {
 	public abstract boolean check(Grid grid);
 
 	/**
-	 * @param grid TODO
-	 * @param runsToCheck TODO
+	 * @param grid
 	 * @param runsToCheck, a list of arrays of length RUN_LENGTH that specify the indices of the cells to check.
 	 * @return
 	 */

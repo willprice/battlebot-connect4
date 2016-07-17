@@ -28,7 +28,7 @@ public class Connect4ValidMoveTests extends AbstractConnect4Tests {
     public Object[] parametersForTokenCountTests() {
         return new Object[]{
                 new Object[]{
-                        new PlayerWhoChoosesTheSameColumn(YELLOW, 0),
+                        new PlayerWhoChoosesTheSameColumn(0),
                         null,
                         1,
                         new int[][]{
@@ -37,8 +37,8 @@ public class Connect4ValidMoveTests extends AbstractConnect4Tests {
                         }
                 },
                 new Object[]{
-                        new PlayerWhoChoosesTheSameColumn(YELLOW, 0),
-                        new PlayerWhoChoosesTheSameColumn(RED, 1),
+                        new PlayerWhoChoosesTheSameColumn(0),
+                        new PlayerWhoChoosesTheSameColumn(1),
                         2,
                         new int[][]{
                                 // column, expectedCount
@@ -47,6 +47,6 @@ public class Connect4ValidMoveTests extends AbstractConnect4Tests {
                         }
                 },
         };
-    };
+    }
 
 }

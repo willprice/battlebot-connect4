@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.concurrent.LinkedBlockingQueue;
 
 public class StubQueue implements Queue {
-    private PlayerPair players;
+    private final PlayerPair players;
 
     public StubQueue(PlayerPair players) {
         this.players = players;

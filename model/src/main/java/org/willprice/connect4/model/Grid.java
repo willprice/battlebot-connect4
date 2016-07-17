@@ -1,23 +1,17 @@
-package org.willprice.connect4;
-
-
-import org.willprice.connect4.model.ColouredDisc;
-import org.willprice.connect4.model.ColumnFullException;
-import org.willprice.connect4.model.Coordinate;
-import org.willprice.connect4.model.NonExistentColumnException;
+package org.willprice.connect4.model;
 
 public class Grid {
-	private ColouredDisc[][] grid;
-	private int cols;
-	private int rows;
-    private int runLength;
+	private final ColouredDisc[][] grid;
+	private final int cols;
+	private final int rows;
+    private final int runLength;
     private Coordinate lastCoordinateUsed;
 
 	public Grid(int cols, int rows, int runLength) {
 		this.cols = cols;
 		this.rows = rows;
 		this.runLength = runLength;
-		this.grid = new ColouredDisc[cols][rows];
+		grid = new ColouredDisc[cols][rows];
 	}
 
 	public int getRowsLength() {
@@ -39,9 +33,9 @@ public class Grid {
 	public void insertDiscInColumn(ColouredDisc disc, int columnIndex) throws NonExistentColumnException, ColumnFullException {
 		checkColumnExists(columnIndex);
 	    int nextFreeRowIndex = getNumberOfTokens(columnIndex);
-	    checkColumnIsntFull(nextFreeRowIndex);
-	    setDisc(columnIndex, nextFreeRowIndex, disc);
-        lastCoordinateUsed = new Coordinate(columnIndex, nextFreeRowIndex);
+		checkColumnIsntFull(nextFreeRowIndex);
+		setDisc(columnIndex, nextFreeRowIndex, disc);
+		lastCoordinateUsed = new Coordinate(columnIndex, nextFreeRowIndex);
 	}
 
 	public boolean isOver() {

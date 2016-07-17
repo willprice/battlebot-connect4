@@ -10,8 +10,8 @@ public class Connect4InvalidMoveTests extends AbstractConnect4Tests {
 
     @Test(expected = ColumnFullException.class)
     public void aPlayerPlacingAColouredDiscInAFullColumnThrowsColumnFullException() throws ColumnFullException, NonExistentColumnException {
-        Player player1 = new PlayerWhoChoosesTheSameColumn(RED, 0);
-        Player player2 = new PlayerWhoChoosesTheSameColumn(YELLOW, 0);
+        Player player1 = new PlayerWhoChoosesTheSameColumn(0);
+        Player player2 = new PlayerWhoChoosesTheSameColumn(0);
         Connect4 game = new Connect4(player1, player2);
         int numberOfTurns = 7;
         takeTurns(game, numberOfTurns);
@@ -19,7 +19,7 @@ public class Connect4InvalidMoveTests extends AbstractConnect4Tests {
 
     @Test(expected = NonExistentColumnException.class)
     public void aPlayerPlacingAColouredDiscOutsideTheFurthestColumnThrowsNonExistentColumnException() throws ColumnFullException, NonExistentColumnException {
-        Player player1 = new PlayerWhoChoosesTheSameColumn(RED, 7);
+        Player player1 = new PlayerWhoChoosesTheSameColumn(7);
         Connect4 game = new Connect4(player1, null);
         takeTurns(game, 1);
     }

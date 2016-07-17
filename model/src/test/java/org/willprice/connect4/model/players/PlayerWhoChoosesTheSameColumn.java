@@ -6,8 +6,7 @@ import org.willprice.connect4.model.Connect4;
 public class PlayerWhoChoosesTheSameColumn extends Player {
     private final int targetColumnIndex;
 
-    public PlayerWhoChoosesTheSameColumn(ColouredDisc colouredDisc, int targetColumnIndex) {
-        super(colouredDisc);
+    public PlayerWhoChoosesTheSameColumn(int targetColumnIndex) {
         this.targetColumnIndex = targetColumnIndex;
     }
 

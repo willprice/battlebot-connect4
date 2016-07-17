@@ -1,6 +1,4 @@
-package org.willprice.connect4;
-
-import org.willprice.connect4.model.Coordinate;
+package org.willprice.connect4.model;
 
 import java.util.ArrayList;
 import java.util.List;

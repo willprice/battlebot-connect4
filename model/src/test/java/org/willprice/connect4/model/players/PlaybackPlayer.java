@@ -5,10 +5,9 @@ import org.willprice.connect4.model.Connect4;
 
 public class PlaybackPlayer extends Player {
     private final int[] moves;
-    private int moveIndex = 0;
+    private int moveIndex;
 
-    public PlaybackPlayer(ColouredDisc disc, int[] moves) {
-        super(disc);
+    public PlaybackPlayer(int[] moves) {
         this.moves = moves;
     }
 
